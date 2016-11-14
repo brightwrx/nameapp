@@ -30,3 +30,19 @@ CREATE TABLE IF NOT EXISTS rds_demo.app_customer (
   CONSTRAINT FK_CUSTOMER_IMAGE_ID
     FOREIGN KEY (customer_image_id)
     REFERENCES rds_demo.app_customer_image (id));    
+    
+    
+ CREATE TABLE IF NOT EXISTS rds_demo.app_names (
+  id INT NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  meaning VARCHAR(1000) NOT NULL,
+  propulartiy_index INT NOT NULL,
+  update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  PRIMARY KEY (id));  
+  
+CREATE TABLE IF NOT EXISTS rds_demo.app_first_names (
+  first_name VARCHAR(30) NOT NULL,
+  propulartiy_index INT NOT NULL
+  ); 
+  

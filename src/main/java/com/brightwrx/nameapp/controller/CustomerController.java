@@ -53,7 +53,7 @@ public class CustomerController {
         										new Address(street, town, county, postcode));
         	
         	customerRepository.save(customer);
-            return customer;               
+            return customer;
     }
 	
 	/**
